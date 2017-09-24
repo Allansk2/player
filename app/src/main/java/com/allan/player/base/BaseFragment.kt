@@ -40,19 +40,19 @@ abstract class BaseFragment: Fragment() {
     /**
      * initial in onCreate
      */
-    protected fun init() {
+    open protected fun init() {
     }
 
     /**
      * initial list data
      */
-    protected fun initData() {
+    open protected fun initData() {
     }
 
     /**
      * init adapter listner
      */
-    protected fun initListner() {
+    open protected fun initListner() {
     }
 
     /**

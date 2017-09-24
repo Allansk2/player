@@ -3,6 +3,7 @@ package com.allan.player.base
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
 /**
@@ -28,21 +29,21 @@ abstract class BaseActivity: AppCompatActivity(), AnkoLogger {
     /**
      * initial views
      */
-    protected fun initView() {
+    open protected fun initView() {
 
     }
 
     /**
      * initial list data
      */
-    protected fun initData() {
+    open protected fun initData() {
 
     }
 
     /**
      * init adapter listner
      */
-    protected fun initListner() {
+    open protected fun initListner() {
     }
 
 
@@ -52,6 +53,11 @@ abstract class BaseActivity: AppCompatActivity(), AnkoLogger {
      */
     protected fun myToast(message: String) {
         runOnUiThread {  toast(message) }
+    }
+
+    protected inline fun <reified T:BaseActivity> startActivityAndFinish() {
+        startActivity<T>()
+        finish()
     }
 
 }
