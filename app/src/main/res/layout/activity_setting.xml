@@ -3,8 +3,13 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <include layout="@layout/toolbar" />
+
+    <fragment
+        android:id="@+id/setting_fragment"
+        class="com.allan.player.ui.fragment.SettingFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="设置界面"/>
+        />
+
 </LinearLayout>

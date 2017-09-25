@@ -40,5 +40,12 @@ interface ToolBarManager {
 //        })
     }
 
+    /**
+     * initilize setting activity tool bar
+     */
+    fun initSettingToolBar(){
+        toolBar.setTitle("设置")
+    }
+
 
 }
