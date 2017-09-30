@@ -3,23 +3,14 @@ package com.allan.player.ui.fragment
 import android.graphics.Color
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
-import android.view.Gravity
 import android.view.View
-import android.widget.TextView
 import com.allan.player.R
 import com.allan.player.adapter.HomeAdapter
 import com.allan.player.base.BaseFragment
 import com.allan.player.model.HomeItemBean
 import com.allan.player.presenter.impl.HomePresenterImpl
-import com.allan.player.util.ThreadUtil
-import com.allan.player.util.URLProviderUtils
 import com.allan.player.view.HomeView
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import kotlinx.android.synthetic.main.fragment_home.*
-import okhttp3.*
-import java.io.IOException
+import kotlinx.android.synthetic.main.fragment_list.*
 
 /**
  * Created by Regina on 2017-09-24.
@@ -32,7 +23,7 @@ class HomeFragment: BaseFragment(), HomeView {
 
 
     override fun initView(): View? {
-        return View.inflate(context, R.layout.fragment_home, null)
+        return View.inflate(context, R.layout.fragment_list, null)
     }
 
     override fun initListner() {

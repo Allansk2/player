@@ -22,37 +22,46 @@
             android:scaleType="centerCrop"/>
 
         <ImageView
-            android:id="@+id/iv"
+            android:id="@+id/author_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp" />
+
+
+        <TextView
+            android:id="@+id/count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_margin="10dp"
-            android:src="@mipmap/home_page_live_new" />
+            android:layout_toRightOf="@id/author_iv"
+            android:maxLines="1"
+            android:text="count"
+            android:textColor="#fff"
+            android:textSize="20sp" />
 
+
+        <TextView
+            android:id="@+id/author_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/count"
+            android:layout_toRightOf="@id/author_iv"
+            android:maxLines="1"
+            android:text="author name"
+            android:textColor="#fff"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@id/iv"
+            android:layout_above="@id/author_name"
+            android:layout_toRightOf="@id/author_iv"
             android:maxLines="1"
-            android:text="Song"
-            android:textColor="#00ff00"
-            android:textSize="25sp" />
-
-
-        <TextView
-            android:id="@+id/desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/title"
-            android:layout_toRightOf="@id/iv"
-            android:maxLines="1"
-            android:text="Description"
+            android:text="title"
             android:textColor="#fff"
             android:textSize="20sp" />
-
 
     </RelativeLayout>
 

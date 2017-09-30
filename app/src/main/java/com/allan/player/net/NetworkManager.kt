@@ -1,10 +1,6 @@
 package com.allan.player.net
 
-import com.allan.player.model.HomeItemBean
 import com.allan.player.util.ThreadUtil
-import com.allan.player.util.URLProviderUtils
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import okhttp3.*
 import java.io.IOException
 

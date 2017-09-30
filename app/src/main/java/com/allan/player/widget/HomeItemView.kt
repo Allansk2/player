@@ -29,9 +29,9 @@ class HomeItemView: RelativeLayout {
      */
     fun setData(item: HomeItemBean) {
         // song name
-        title.setText(item.title)
+        title.text = item.title
         // sond description
-        desc.setText(item.description)
+        desc.text = item.description
         // background image
         Picasso.with(context).load(item.posterPic).into(bg)
     }

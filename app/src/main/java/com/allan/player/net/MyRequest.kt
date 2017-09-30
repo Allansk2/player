@@ -1,8 +1,6 @@
 package com.allan.player.net
 
-import com.allan.player.model.HomeItemBean
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import java.lang.reflect.ParameterizedType
 
 /**
