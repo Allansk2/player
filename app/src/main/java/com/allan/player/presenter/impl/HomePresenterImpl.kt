@@ -1,18 +1,18 @@
 package com.allan.player.presenter.impl
 
-import android.util.Log
+import com.allan.player.base.BaseListPresenter.Companion.TYPE_LOAD_MORE
+import com.allan.player.base.BaseListPresenter.Companion.TYPE_NORMAL
+import com.allan.player.base.BaseView
 import com.allan.player.model.HomeItemBean
 import com.allan.player.net.HomeRequest
 import com.allan.player.net.ResponseHandler
 import com.allan.player.presenter.interf.HomePresenter
-import com.allan.player.presenter.interf.HomePresenter.Companion.TYPE_LOAD_MORE
-import com.allan.player.presenter.interf.HomePresenter.Companion.TYPE_NORMAL
 import com.allan.player.view.HomeView
 
 /**
  * Created by Regina on 2017-09-30.
  */
-class HomePresenterImpl(var homeView: HomeView?): HomePresenter, ResponseHandler<List<HomeItemBean>> {
+class HomePresenterImpl(var homeView: BaseView<List<HomeItemBean>>?): HomePresenter, ResponseHandler<List<HomeItemBean>> {
 
     override fun viewDestroy(){
         homeView.let {
