@@ -59,8 +59,19 @@ abstract class BaseListAdapter<BEAN, ITEMVIEW: View> : RecyclerView.Adapter<Base
         val itemView = holder.itemView as ITEMVIEW
         // update item view
         refreshView(itemView, item)
+        // set onclick listner
+        itemView.setOnClickListener {
+            listner?.let { it(item) }
+//            listner?.invoke(item)
+        }
     }
 
+    // function to callback
+    var listner: ((itemBean: BEAN) -> Unit)? = null
+
+    fun setMyListner(listner: (itemBean: BEAN) -> Unit){
+        this.listner = listner
+    }
 
     override fun getItemViewType(position: Int): Int {
         if (position == list.size) {

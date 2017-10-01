@@ -31,17 +31,12 @@ class MvItemView : RelativeLayout {
     fun setData(item: VideosBean) {
         // song description
         title.text = item.title
-        // author name
-//        desc.text = item.creator?.nickName
-//        // count
-//        count.text = item.videoCount.toString()
-//        // background image
-//        Picasso.with(context).load(item.playListBigPic).into(bg)
-//        // author image
-//        Picasso.with(context)
-//                .load(item.creator?.largeAvatar)
-//                .transform(CropCircleTransformation())
-//                .into(author_iv)
+        // artis name
+        artis.text = item.artistName
+
+        // background image
+        Picasso.with(context).load(item.playListPic).into(bg)
+
     }
 
 }

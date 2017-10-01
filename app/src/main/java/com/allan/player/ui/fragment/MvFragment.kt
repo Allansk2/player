@@ -39,7 +39,7 @@ class MvFragment: BaseFragment(), MvView {
     }
 
     override fun loadSuccess(list: List<MvAreaBean>?) {
-        val adapter = MvPagerAdapter(list, childFragmentManager)
+        val adapter = MvPagerAdapter(context, list, childFragmentManager)
         viewPager.adapter = adapter
         tabLayout.setupWithViewPager(viewPager)
     }

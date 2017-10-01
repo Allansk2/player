@@ -68,14 +68,18 @@ abstract class BaseListFragment<RESPONSE, BEAN, ITEMVIEW: View> : BaseFragment()
     }
 
     override fun loadSuccess(response: RESPONSE?) {
-        refreshLayout.isRefreshing = false
+        if (refreshLayout != null) {
+            refreshLayout.isRefreshing = false
+        }
         adapter.updateData(getList(response))
     }
 
 
 
     override fun loadMoreSuccess(response: RESPONSE?) {
-        refreshLayout.isRefreshing = false
+        if (refreshLayout != null) {
+            refreshLayout.isRefreshing = false
+        }
         adapter.loadMoreData(getList(response))
     }
 
