@@ -9,7 +9,7 @@ android {
     buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.allan.player"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -40,10 +40,14 @@ dependencies {
     //okhttp
     compile 'com.squareup.okhttp3:okhttp:3.9.0'
     implementation 'com.google.code.gson:gson:2.2.4'
-
     //picasso
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'jp.wasabeef:picasso-transformations:2.1.2'
     // If you want to use the GPU Filters
     compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    implementation project(':vitamio')
+    implementation 'com.dou361.ijkplayer:jjdxm-ijkplayer:1.0.2'
+
+    // jiecao video player
+    compile 'cn.jzvd:jiaozivideoplayer:6.0.2'
 }

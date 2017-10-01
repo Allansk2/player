@@ -24,6 +24,11 @@
         <activity android:name=".ui.activity.AboutActivity" />
         <activity android:name=".ui.activity.VideoPlayerActivity" />
         <activity android:name=".ui.activity.TextureVideoPlayerActivity" />
+        <activity android:name=".ui.activity.VitamioVideoPlayerActivity" />
+        <activity android:name=".ui.activity.IjkVideoPlayerActivity" />
+        <activity android:name=".ui.activity.JiecaoVideoPlayerActivity"
+            android:configChanges="screenSize|orientation|keyboard"
+            />
     </application>
 
 </manifest>

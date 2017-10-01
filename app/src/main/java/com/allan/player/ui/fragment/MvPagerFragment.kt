@@ -13,8 +13,7 @@ import com.allan.player.model.MvPagerBean
 import com.allan.player.model.VideoPlayBean
 import com.allan.player.model.VideosBean
 import com.allan.player.presenter.impl.MvListPresenterImpl
-import com.allan.player.ui.activity.TextureVideoPlayerActivity
-import com.allan.player.ui.activity.VideoPlayerActivity
+import com.allan.player.ui.activity.*
 import com.allan.player.view.MvListView
 import com.allan.player.widget.MvItemView
 import org.jetbrains.anko.support.v4.startActivity
@@ -51,7 +50,7 @@ class MvPagerFragment: BaseListFragment<MvPagerBean, VideosBean, MvItemView>(), 
         // set item onclick listner
         adapter.setMyListner {
             val videoPlayBean = VideoPlayBean(it.id, it.title, it.url)
-            startActivity<TextureVideoPlayerActivity>("item" to videoPlayBean)
+            startActivity<JiecaoVideoPlayerActivity>("item" to videoPlayBean)
         }
     }
 
